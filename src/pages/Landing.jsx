@@ -3,6 +3,20 @@ import React from "react";
 export default function Landing() {
   return (
     <div style={{ color: "#f5f5f5", background: "#050510", paddingBottom: "4rem" }}>
+      {/* Logo Placeholder */}
+      <section style={{ textAlign: "center", padding: "2rem" }}>
+        <div style={{
+          display: "inline-block",
+          padding: "1rem 2rem",
+          border: "1px solid #ff4b8b",
+          borderRadius: "12px",
+          fontSize: "1.5rem",
+          fontWeight: 700,
+          letterSpacing: "1px"
+        }}>
+          BERRY
+        </div>
+      </section>
       {/* Identity Block */}
       <section style={{ padding: "4rem 2rem", textAlign: "center" }}>
         <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>BERRY IS HERE</h1>
@@ -22,6 +36,31 @@ export default function Landing() {
       </section>
 
       {/* Movement Update */}
+      {/* Relic Preview */}
+      {/* Roadmap Strip */}
+      <section style={{ padding: "2rem", background: "#0a0a15" }}>
+        <h2>What’s Coming Next</h2>
+        <ul style={{ opacity: 0.8, lineHeight: "1.8" }}>
+          <li>Berry Logo & Visual Identity</li>
+          <li>Relic System Preview</li>
+          <li>Dashboard Visual Overhaul</li>
+          <li>Berry AI Integration</li>
+        </ul>
+      </section>
+      <section style={{ padding: "2rem", textAlign: "center" }}>
+        <h2>Your First Relic</h2>
+        <p style={{ opacity: 0.8 }}>
+          Relics are coming soon — modular, inspectable, and tied to your on‑chain identity.
+        </p>
+        <div style={{
+          margin: "2rem auto",
+          width: "120px",
+          height: "120px",
+          borderRadius: "12px",
+          border: "1px solid #444",
+          background: "#0a0a15"
+        }}></div>
+      </section>
       <section style={{ padding: "2rem 2rem", background: "#111" }}>
         <h2>Today’s Update — 20 February</h2>
         <p>
