@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Web3 from "web3";
 import { BERRY_CONTRACT_ADDRESS, CHAIN_ID_HEX } from "./config.js";
-import abiJson from "../../contracts/out/BoundlessBerriesABI.json";
+// import abiJson from "../../contracts/out/BoundlessBerriesABI.json";
 import Mint from "./pages/Mint.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import MyRelic from "./pages/MyRelic.jsx";
@@ -21,20 +21,24 @@ export default function App() {
       alert("MetaMask required");
       return;
     }
+
     const provider = window.ethereum;
     const chainId = await provider.request({ method: "eth_chainId" });
+
     if (chainId !== CHAIN_ID_HEX) {
       await provider.request({
         method: "wallet_switchEthereumChain",
         params: [{ chainId: CHAIN_ID_HEX }]
       });
     }
+
     const accounts = await provider.request({ method: "eth_requestAccounts" });
     const w3 = new Web3(provider);
-    const c = new w3.eth.Contract(abiJson.abi, BERRY_CONTRACT_ADDRESS);
+
+    // Contract disabled for landing page deploy
     setAccount(accounts[0]);
     setWeb3(w3);
-    setContract(c);
+    setContract(null);
   };
 
   const ctx = { account, web3, contract, connectWallet };
@@ -56,11 +60,13 @@ export default function App() {
               Berry Platform
             </Link>
           </div>
+
           <nav style={{ display: "flex", gap: "16px", fontSize: "14px" }}>
             <Link to="/mint" style={{ color: "#aaa", textDecoration: "none" }}>Mint</Link>
             <Link to="/dashboard" style={{ color: "#aaa", textDecoration: "none" }}>Dashboard</Link>
             <Link to="/myrelic" style={{ color: "#aaa", textDecoration: "none" }}>My Relic</Link>
           </nav>
+
           <button
             onClick={connectWallet}
             style={{
