@@ -3,6 +3,33 @@ import React from "react";
 export default function Landing() {
   return (
     <div style={{ color: "#f5f5f5", background: "#050510", paddingBottom: "4rem" }}>
+      {/* Identity Block */}
+      <section style={{ padding: "4rem 2rem", textAlign: "center" }}>
+        <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>BERRY IS HERE</h1>
+        <p style={{ fontSize: "1.25rem", opacity: 0.8 }}>
+          Forensic systems. Transparent architecture. Built for real people.
+        </p>
+        <hr style={{ margin: "2rem auto", width: "60%", opacity: 0.2 }} />
+      </section>
+
+      {/* Ethos */}
+      <section style={{ padding: "2rem 2rem" }}>
+        <h2>The Berry Ethos</h2>
+        <p>
+          Berry exists to bring forensic clarity to crypto. No black boxes. No silent
+          failures. Just transparent systems, modular engines, and user-first design.
+        </p>
+      </section>
+
+      {/* Movement Update */}
+      <section style={{ padding: "2rem 2rem", background: "#111" }}>
+        <h2>Today’s Update — 20 February</h2>
+        <p>
+          Brand identity is now being added to the platform. The first relics, visual
+          elements, and structural components are being introduced. Berry is moving
+          forward exactly as planned.
+        </p>
+      </section>
 
       {/* Hero */}
       <section style={{ padding: "3rem 1rem", textAlign: "center" }}>
