@@ -140,6 +140,31 @@ export default function Landing() {
         </p>
       </section>
 
+      {/* Subtle Explorer Link */}
+<div style={{ marginTop: "4rem", textAlign: "center" }}>
+  <a
+    href="/Explorer"
+    style={{
+      color: "#888",
+      fontSize: "0.9rem",
+      letterSpacing: "0.5px",
+      opacity: 0.6,
+      textDecoration: "none",
+      transition: "opacity 0.3s ease, color 0.3s ease"
+    }}
+    onMouseEnter={(e) => {
+      e.target.style.opacity = 1;
+      e.target.style.color = "#fff";
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.opacity = 0.6;
+      e.target.style.color = "#888";
+    }}
+  >
+    explore the system →
+  </a>
+</div>
+
     </div>
   );
 }
